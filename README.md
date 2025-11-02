@@ -81,7 +81,3 @@ The project uses mock API functions in `src/utils/api.js`. Replace these with ac
 - **BookContext**: Books, requests, recommendations
 - **NotificationContext**: Toast notifications
 
-## 📝 License
-
-MIT
-
