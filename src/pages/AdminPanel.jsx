@@ -24,6 +24,13 @@ const AdminPanel = () => {
     loadRequests(null, 'pending');
   }, []);
 
+  // Reload requests when switching to requests tab
+  useEffect(() => {
+    if (activeTab === 'requests') {
+      loadRequests(null, 'pending');
+    }
+  }, [activeTab, loadRequests]);
+
   const handleApprove = async (requestId) => {
     await approveRequest(requestId);
     loadRequests(null, 'pending');
@@ -54,54 +61,70 @@ const AdminPanel = () => {
   const pendingRequests = requests.filter((req) => req.status === 'pending');
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 sm:space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Admin Panel</h1>
-        <p className="text-gray-600">Manage library operations and requests</p>
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Admin Panel</h1>
+        <p className="text-sm sm:text-base text-gray-600">Manage library operations and requests</p>
       </div>
 
       {/* Tabs */}
-      <div className="flex space-x-2 bg-white rounded-lg p-1 border border-gray-200 shadow-sm">
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 sm:space-x-2 bg-white rounded-lg p-1 border border-gray-200 shadow-sm">
         <button
-          onClick={() => setActiveTab('requests')}
-          className={`flex-1 py-2.5 rounded-md font-semibold text-sm transition-all duration-200 ${
+          onClick={() => {
+            setActiveTab('requests');
+            loadRequests(null, 'pending');
+          }}
+          className={`flex-1 py-2 sm:py-2.5 rounded-md font-semibold text-xs sm:text-sm transition-all duration-200 ${
             activeTab === 'requests'
               ? 'bg-blue-600 text-white shadow-sm'
               : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
           }`}
         >
-          Pending Requests {pendingRequests.length > 0 && `(${pendingRequests.length})`}
+          <span className="hidden sm:inline">Pending Requests</span>
+          <span className="sm:hidden">Requests</span>
+          {pendingRequests.length > 0 && ` (${pendingRequests.length})`}
         </button>
         <button
           onClick={() => setActiveTab('add-book')}
-          className={`flex-1 py-2.5 rounded-md font-semibold text-sm transition-all duration-200 ${
+          className={`flex-1 py-2 sm:py-2.5 rounded-md font-semibold text-xs sm:text-sm transition-all duration-200 ${
             activeTab === 'add-book'
               ? 'bg-blue-600 text-white shadow-sm'
               : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
           }`}
         >
-          Add New Book
+          <span className="hidden sm:inline">Add New Book</span>
+          <span className="sm:hidden">Add Book</span>
         </button>
         <button
           onClick={() => setActiveTab('robot')}
-          className={`flex-1 py-2.5 rounded-md font-semibold text-sm transition-all duration-200 ${
+          className={`flex-1 py-2 sm:py-2.5 rounded-md font-semibold text-xs sm:text-sm transition-all duration-200 ${
             activeTab === 'robot'
               ? 'bg-blue-600 text-white shadow-sm'
               : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
           }`}
         >
-          Robot Status
+          <span className="hidden sm:inline">Robot Status</span>
+          <span className="sm:hidden">Robot</span>
         </button>
       </div>
 
       {/* Tab Content */}
       {activeTab === 'requests' && (
         <div>
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-bold text-gray-900">Pending Requests</h2>
-            {pendingRequests.length > 0 && (
-              <span className="text-sm text-gray-500">{pendingRequests.length} request{pendingRequests.length !== 1 ? 's' : ''} pending</span>
-            )}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-3">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">Pending Requests</h2>
+            <div className="flex items-center gap-3 flex-wrap">
+              <button
+                onClick={() => loadRequests(null, 'pending')}
+                className="text-xs sm:text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors px-2 py-1 rounded hover:bg-blue-50"
+                title="Refresh requests"
+              >
+                ↻ Refresh
+              </button>
+              {pendingRequests.length > 0 && (
+                <span className="text-xs sm:text-sm text-gray-500">{pendingRequests.length} request{pendingRequests.length !== 1 ? 's' : ''} pending</span>
+              )}
+            </div>
           </div>
           {pendingRequests.length === 0 ? (
             <div className="card text-center py-12">

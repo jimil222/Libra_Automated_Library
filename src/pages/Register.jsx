@@ -65,14 +65,14 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-teal-400 flex items-center justify-center p-4">
-      <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-8 w-full max-w-md border border-white/20">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-teal-400 flex items-center justify-center p-4 sm:p-6">
+      <div className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-2xl p-6 sm:p-8 w-full max-w-md border border-white/20">
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-teal-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <span className="text-3xl font-bold text-white">L</span>
           </div>
-          <h1 className="text-3xl font-bold text-white mb-2">Create Account</h1>
-          <p className="text-gray-200">Register for a new account</p>
+          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">Create Account</h1>
+          <p className="text-sm sm:text-base text-gray-200">Register for a new account</p>
         </div>
 
         <div className="flex space-x-2 mb-6 bg-white/10 rounded-lg p-1">

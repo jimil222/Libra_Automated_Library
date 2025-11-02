@@ -62,12 +62,13 @@ const StudentDashboard = () => {
   const myRequests = requests.filter((req) => req.student_id === user?.id);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 sm:space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-          Welcome back, {user?.first_name}! <FaHandPaper className="text-blue-600" />
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 flex items-center gap-2 flex-wrap">
+          <span>Welcome back, {user?.first_name}!</span>
+          <FaHandPaper className="text-blue-600 text-xl sm:text-2xl" />
         </h1>
-        <p className="text-gray-600">Browse and request books from the library</p>
+        <p className="text-sm sm:text-base text-gray-600">Browse and request books from the library</p>
       </div>
 
       <SearchBar value={searchQuery} onChange={setSearchQuery} />
@@ -77,8 +78,8 @@ const StudentDashboard = () => {
         <div>
           <div className="flex items-center mb-4">
             <FaStar className="text-xl mr-2 text-yellow-500" />
-            <h2 className="text-xl font-bold text-gray-900">
-              Recommended for You {user?.field_of_study && `(${user.field_of_study})`}
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+              Recommended for You {user?.field_of_study && <span className="hidden sm:inline">({user.field_of_study})</span>}
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
@@ -123,8 +124,8 @@ const StudentDashboard = () => {
       {myRequests.length > 0 && (
         <div>
           <div className="flex items-center mb-4">
-            <FaClipboardList className="text-xl mr-2 text-blue-600" />
-            <h2 className="text-xl font-bold text-gray-900">My Requests</h2>
+            <FaClipboardList className="text-lg sm:text-xl mr-2 text-blue-600" />
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">My Requests</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {myRequests.map((request) => (
@@ -136,13 +137,13 @@ const StudentDashboard = () => {
 
       {/* Books Section */}
       <div>
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
           <div className="flex items-center">
-            <FaBook className="text-xl mr-2 text-blue-600" />
-            <h2 className="text-xl font-bold text-gray-900">Available Books</h2>
+            <FaBook className="text-lg sm:text-xl mr-2 text-blue-600" />
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">Available Books</h2>
           </div>
           {filteredBooks.length > 0 && (
-            <span className="text-sm text-gray-500">{filteredBooks.length} books available</span>
+            <span className="text-xs sm:text-sm text-gray-500">{filteredBooks.length} books available</span>
           )}
         </div>
         {filteredBooks.length === 0 ? (

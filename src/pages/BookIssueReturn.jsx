@@ -37,13 +37,13 @@ const BookIssueReturn = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Issue / Return Books</h1>
-        <p className="text-gray-600">Use NFC to issue or return books from the library</p>
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Issue / Return Books</h1>
+        <p className="text-sm sm:text-base text-gray-600">Use NFC to issue or return books from the library</p>
       </div>
 
-      <div className="flex space-x-4 bg-white rounded-lg p-1 border border-gray-200 shadow-sm">
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 bg-white rounded-lg p-1 border border-gray-200 shadow-sm">
         <button
           onClick={() => {
             setMode('issue');

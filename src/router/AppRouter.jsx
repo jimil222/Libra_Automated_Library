@@ -37,23 +37,9 @@ const ProtectedRoute = ({ children, requiredRole = null }) => {
   return children || <div className="text-white p-4">Protected route - no content</div>;
 };
 
-const AppRouter = () => {
-  let user, loading;
+const LoginRoute = () => {
+  const { user, loading } = useAuth();
   
-  try {
-    const auth = useAuth();
-    user = auth.user;
-    loading = auth.loading;
-  } catch (error) {
-    console.error('Error in AppRouter useAuth:', error);
-    return (
-      <div style={{ padding: '50px', background: 'red', color: 'white' }}>
-        <h1>Router Error</h1>
-        <pre>{error.toString()}</pre>
-      </div>
-    );
-  }
-
   if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-teal-400 flex items-center justify-center">
@@ -61,26 +47,55 @@ const AppRouter = () => {
       </div>
     );
   }
+  
+  if (user && user.id) {
+    return <Navigate to={user.role === 'admin' ? '/admin' : '/dashboard'} replace />;
+  }
+  
+  return <Login />;
+};
 
+const RegisterRoute = () => {
+  const { user, loading } = useAuth();
+  
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-teal-400 flex items-center justify-center">
+        <div className="text-white text-xl">Loading...</div>
+      </div>
+    );
+  }
+  
+  if (user && user.id) {
+    return <Navigate to={user.role === 'admin' ? '/admin' : '/dashboard'} replace />;
+  }
+  
+  return <Register />;
+};
+
+const HomeRoute = () => {
+  const { user, loading } = useAuth();
+  
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-teal-400 flex items-center justify-center">
+        <div className="text-white text-xl">Loading...</div>
+      </div>
+    );
+  }
+  
+  if (user && user.id) {
+    return <Navigate to={user.role === 'admin' ? '/admin' : '/dashboard'} replace />;
+  }
+  
+  return <Navigate to="/login" replace />;
+};
+
+const AppRouter = () => {
   return (
     <Routes>
-      <Route 
-        path="/login" 
-        element={
-          !user || !user.id ? (
-            <Login />
-          ) : (
-            <Navigate 
-              to={user.role === 'admin' ? '/admin' : '/dashboard'} 
-              replace 
-            />
-          )
-        } 
-      />
-      <Route 
-        path="/register" 
-        element={!user ? <Register /> : <Navigate to={user.role === 'admin' ? '/admin' : '/dashboard'} replace />} 
-      />
+      <Route path="/login" element={<LoginRoute />} />
+      <Route path="/register" element={<RegisterRoute />} />
       
       <Route
         path="/dashboard"
@@ -117,15 +132,7 @@ const AppRouter = () => {
 
       <Route path="/test" element={<TestPage />} />
       
-      <Route 
-        path="/" 
-        element={
-          <Navigate 
-            to={user && user.id ? (user.role === 'admin' ? '/admin' : '/dashboard') : '/login'} 
-            replace 
-          />
-        } 
-      />
+      <Route path="/" element={<HomeRoute />} />
       <Route path="/404" element={<NotFound />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

@@ -5,6 +5,9 @@ import { dummyRecommendations } from '../data/dummyRecommendations';
 import { dummyRobotStatus } from '../data/dummyRobotStatus';
 import { dummyUsers } from '../data/dummyUsers';
 
+// Import dummyRequests to ensure we're modifying the actual array
+// This is already imported above, but we need to make sure we're working with the actual reference
+
 const delay = (ms = 500) => new Promise((resolve) => setTimeout(resolve, ms));
 
 // Authentication
@@ -175,6 +178,33 @@ export const nfcIssue = async (bookIdentifier, studentId) => {
     b.title.toLowerCase() === bookIdentifier.toLowerCase()
   );
   if (!book) throw new Error('Book not found. Please check the Book ID or Book Name.');
+  
+  // If book is available and being directly issued, create a request record for tracking
+  if (book.status === 'available') {
+    // Check if there's already a pending request for this book by this student
+    const existingRequest = dummyRequests.find(
+      req => req.book_id === book.id && req.student_id === studentId && req.status === 'pending'
+    );
+    
+    if (!existingRequest) {
+      // Create an auto-approved request for direct issue tracking
+      const newRequest = {
+        id: dummyRequests.length + 1,
+        student_id: studentId,
+        book_id: book.id,
+        status: 'approved',
+        requested_at: new Date().toISOString(),
+        approved_at: new Date().toISOString(),
+        book: book
+      };
+      dummyRequests.push(newRequest);
+    } else {
+      // If there's a pending request, auto-approve it
+      existingRequest.status = 'approved';
+      existingRequest.approved_at = new Date().toISOString();
+    }
+  }
+  
   if (book.status !== 'available' && book.status !== 'reserved') {
     throw new Error('Book is not available for issue');
   }

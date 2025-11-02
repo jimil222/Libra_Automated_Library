@@ -33,8 +33,8 @@ const RobotStatus = () => {
 
   return (
     <div className="card">
-      <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-        <FaRobot className="mr-2 text-2xl text-blue-600" /> Robot Status
+      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center flex-wrap">
+        <FaRobot className="mr-2 text-xl sm:text-2xl text-blue-600" /> Robot Status
       </h3>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">

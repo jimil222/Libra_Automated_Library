@@ -17,14 +17,14 @@ const NFCScanner = ({ onScan, mode = 'issue', loading = false }) => {
 
   return (
     <div className="card">
-      <div className="text-center mb-6">
-        <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
-          <FaMobileAlt className="w-10 h-10 text-white" />
+      <div className="text-center mb-4 sm:mb-6">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 sm:mb-4 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
+          <FaMobileAlt className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
         </div>
-        <h2 className="text-xl font-bold text-gray-900 mb-2">
+        <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
           NFC {mode === 'issue' ? 'Issue' : 'Return'}
         </h2>
-        <p className="text-gray-600 text-sm">Tap your book on the NFC reader or enter Book ID manually</p>
+        <p className="text-gray-600 text-xs sm:text-sm px-2">Tap your book on the NFC reader or enter Book ID manually</p>
       </div>
 
       <div className="mb-6">
