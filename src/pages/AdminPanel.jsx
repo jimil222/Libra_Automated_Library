@@ -40,6 +40,7 @@ const AdminPanel = () => {
   const handleReject = async (requestId) => {
     await rejectRequest(requestId);
     loadRequests(null, 'pending');
+    loadBooks(); // Reload books so rejected book appears as available again
   };
 
   const handleAddBook = async (e) => {

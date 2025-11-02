@@ -1,6 +1,12 @@
 import { StatusBadge } from './StatusBadge';
 
 const BookCard = ({ book, onRequest, showRequestButton = true, disabled = false }) => {
+  const getButtonText = () => {
+    if (book.status !== 'available') return 'Unavailable';
+    if (disabled) return 'Requested';
+    return 'Request';
+  };
+
   return (
     <div className="card hover:border-gray-300 group">
       <div className="flex justify-between items-start mb-4">
@@ -27,8 +33,9 @@ const BookCard = ({ book, onRequest, showRequestButton = true, disabled = false 
                 ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
                 : 'btn-primary text-sm py-2'
             }`}
+            title={disabled && book.status === 'available' ? 'You have already requested this book' : ''}
           >
-            {book.status === 'available' ? 'Request' : 'Unavailable'}
+            {getButtonText()}
           </button>
         )}
       </div>
