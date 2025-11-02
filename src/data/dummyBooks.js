@@ -1,0 +1,122 @@
+// 100 books with various genres for the library system
+export const dummyBooks = [
+  // Computer Science & Programming
+  { id: 1, book_id: 'NFC-001', title: 'Introduction to Algorithms', author: 'Thomas H. Cormen', bin_id: 1, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 2, book_id: 'NFC-002', title: 'Clean Code', author: 'Robert C. Martin', bin_id: 1, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 3, book_id: 'NFC-003', title: 'Design Patterns', author: 'Gang of Four', bin_id: 1, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 4, book_id: 'NFC-004', title: 'The Pragmatic Programmer', author: 'Andrew Hunt', bin_id: 2, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 5, book_id: 'NFC-005', title: 'System Design Interview', author: 'Alex Xu', bin_id: 2, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 6, book_id: 'NFC-006', title: 'Cracking the Coding Interview', author: 'Gayle Laakmann McDowell', bin_id: 2, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 7, book_id: 'NFC-007', title: 'JavaScript: The Good Parts', author: 'Douglas Crockford', bin_id: 3, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 8, book_id: 'NFC-008', title: 'Python Crash Course', author: 'Eric Matthes', bin_id: 3, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 9, book_id: 'NFC-009', title: 'Effective Java', author: 'Joshua Bloch', bin_id: 3, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 10, book_id: 'NFC-010', title: 'Head First Design Patterns', author: 'Eric Freeman', bin_id: 4, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+
+  // Artificial Intelligence & Data Science
+  { id: 11, book_id: 'NFC-011', title: 'Hands-On Machine Learning', author: 'Aurélien Géron', bin_id: 4, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 12, book_id: 'NFC-012', title: 'Deep Learning', author: 'Ian Goodfellow', bin_id: 4, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 13, book_id: 'NFC-013', title: 'Pattern Recognition and Machine Learning', author: 'Christopher Bishop', bin_id: 5, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 14, book_id: 'NFC-014', title: 'Data Science from Scratch', author: 'Joel Grus', bin_id: 5, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 15, book_id: 'NFC-015', title: 'The Hundred-Page Machine Learning Book', author: 'Andriy Burkov', bin_id: 5, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 16, book_id: 'NFC-016', title: 'Neural Networks and Deep Learning', author: 'Michael Nielsen', bin_id: 6, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 17, book_id: 'NFC-017', title: 'Python for Data Analysis', author: 'Wes McKinney', bin_id: 6, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 18, book_id: 'NFC-018', title: 'Introduction to Statistical Learning', author: 'Gareth James', bin_id: 6, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 19, book_id: 'NFC-019', title: 'Natural Language Processing with Python', author: 'Steven Bird', bin_id: 7, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 20, book_id: 'NFC-020', title: 'Reinforcement Learning: An Introduction', author: 'Richard Sutton', bin_id: 7, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+
+  // Internet of Things (IoT)
+  { id: 21, book_id: 'NFC-021', title: 'IoT Fundamentals', author: 'David Hanes', bin_id: 7, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 22, book_id: 'NFC-022', title: 'Getting Started with IoT', author: 'Cuno Pfister', bin_id: 8, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 23, book_id: 'NFC-023', title: 'Arduino IoT Cloud for Developers', author: 'Marco Schwartz', bin_id: 8, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 24, book_id: 'NFC-024', title: 'IoT Solutions in Microsoft Azure', author: 'Olivier Bloch', bin_id: 8, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 25, book_id: 'NFC-025', title: 'Raspberry Pi IoT Projects', author: 'John C. Shovic', bin_id: 9, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 26, book_id: 'NFC-026', title: 'Smart Home Automation with IoT', author: 'Ruben Oliva Ramos', bin_id: 9, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 27, book_id: 'NFC-027', title: 'Practical IoT Hacking', author: 'Fotios Chantzis', bin_id: 9, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 28, book_id: 'NFC-028', title: 'Embedded IoT Systems', author: 'Raj Kamal', bin_id: 10, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 29, book_id: 'NFC-029', title: 'MQTT Essentials', author: 'Gaston C. Hillar', bin_id: 10, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 30, book_id: 'NFC-030', title: 'IoT and Edge Computing for Architects', author: 'Perry Lea', bin_id: 10, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+
+  // Information Technology
+  { id: 31, book_id: 'NFC-031', title: 'IT Infrastructure Architecture', author: 'Sjaak Laan', bin_id: 11, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 32, book_id: 'NFC-032', title: 'Cloud Computing Explained', author: 'John Rhoton', bin_id: 11, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 33, book_id: 'NFC-033', title: 'Network Security Essentials', author: 'William Stallings', bin_id: 11, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 34, book_id: 'NFC-034', title: 'Database Systems Design', author: 'Carlos Coronel', bin_id: 12, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 35, book_id: 'NFC-035', title: 'Cybersecurity Essentials', author: 'Charles Brooks', bin_id: 12, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 36, book_id: 'NFC-036', title: 'DevOps Handbook', author: 'Gene Kim', bin_id: 12, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 37, book_id: 'NFC-037', title: 'AWS Certified Solutions Architect', author: 'Ben Piper', bin_id: 13, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 38, book_id: 'NFC-038', title: 'Kubernetes in Action', author: 'Marko Lukša', bin_id: 13, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 39, book_id: 'NFC-039', title: 'The Phoenix Project', author: 'Gene Kim', bin_id: 13, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 40, book_id: 'NFC-040', title: 'Docker Deep Dive', author: 'Nigel Poulton', bin_id: 14, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+
+  // Mechanical Engineering
+  { id: 41, book_id: 'NFC-041', title: 'Mechanical Engineering Design', author: 'J.E. Shigley', bin_id: 14, status: 'available', reserved_by: null, genre: 'Mechanical Engineering', created_at: '2024-01-15T10:00:00Z' },
+  { id: 42, book_id: 'NFC-042', title: 'Thermodynamics: An Engineering Approach', author: 'Yunus A. Çengel', bin_id: 14, status: 'available', reserved_by: null, genre: 'Mechanical Engineering', created_at: '2024-01-15T10:00:00Z' },
+  { id: 43, book_id: 'NFC-043', title: 'Fundamentals of Heat and Mass Transfer', author: 'Theodore L. Bergman', bin_id: 15, status: 'available', reserved_by: null, genre: 'Mechanical Engineering', created_at: '2024-01-15T10:00:00Z' },
+  { id: 44, book_id: 'NFC-044', title: 'Fluid Mechanics', author: 'Frank M. White', bin_id: 15, status: 'available', reserved_by: null, genre: 'Mechanical Engineering', created_at: '2024-01-15T10:00:00Z' },
+  { id: 45, book_id: 'NFC-045', title: 'Machine Design', author: 'Robert L. Norton', bin_id: 15, status: 'available', reserved_by: null, genre: 'Mechanical Engineering', created_at: '2024-01-15T10:00:00Z' },
+  { id: 46, book_id: 'NFC-046', title: 'Manufacturing Processes', author: 'Serope Kalpakjian', bin_id: 16, status: 'available', reserved_by: null, genre: 'Mechanical Engineering', created_at: '2024-01-15T10:00:00Z' },
+  { id: 47, book_id: 'NFC-047', title: 'Engineering Mechanics: Statics', author: 'Russell C. Hibbeler', bin_id: 16, status: 'available', reserved_by: null, genre: 'Mechanical Engineering', created_at: '2024-01-15T10:00:00Z' },
+  { id: 48, book_id: 'NFC-048', title: 'Materials Science and Engineering', author: 'William D. Callister', bin_id: 16, status: 'available', reserved_by: null, genre: 'Mechanical Engineering', created_at: '2024-01-15T10:00:00Z' },
+  { id: 49, book_id: 'NFC-049', title: 'Control Systems Engineering', author: 'Norman S. Nise', bin_id: 17, status: 'available', reserved_by: null, genre: 'Mechanical Engineering', created_at: '2024-01-15T10:00:00Z' },
+  { id: 50, book_id: 'NFC-050', title: 'Internal Combustion Engine Fundamentals', author: 'John B. Heywood', bin_id: 17, status: 'available', reserved_by: null, genre: 'Mechanical Engineering', created_at: '2024-01-15T10:00:00Z' },
+
+  // General Engineering & Science
+  { id: 51, book_id: 'NFC-051', title: 'Mathematics for Engineers', author: 'Anthony Croft', bin_id: 17, status: 'available', reserved_by: null, genre: 'Mathematics', created_at: '2024-01-15T10:00:00Z' },
+  { id: 52, book_id: 'NFC-052', title: 'Linear Algebra and Its Applications', author: 'David C. Lay', bin_id: 18, status: 'available', reserved_by: null, genre: 'Mathematics', created_at: '2024-01-15T10:00:00Z' },
+  { id: 53, book_id: 'NFC-053', title: 'Calculus: Early Transcendentals', author: 'James Stewart', bin_id: 18, status: 'available', reserved_by: null, genre: 'Mathematics', created_at: '2024-01-15T10:00:00Z' },
+  { id: 54, book_id: 'NFC-054', title: 'Physics for Scientists and Engineers', author: 'Raymond A. Serway', bin_id: 18, status: 'available', reserved_by: null, genre: 'Physics', created_at: '2024-01-15T10:00:00Z' },
+  { id: 55, book_id: 'NFC-055', title: 'Chemistry: The Central Science', author: 'Theodore L. Brown', bin_id: 19, status: 'available', reserved_by: null, genre: 'Chemistry', created_at: '2024-01-15T10:00:00Z' },
+  { id: 56, book_id: 'NFC-056', title: 'Engineering Economy', author: 'William G. Sullivan', bin_id: 19, status: 'available', reserved_by: null, genre: 'Business', created_at: '2024-01-15T10:00:00Z' },
+  { id: 57, book_id: 'NFC-057', title: 'Project Management for Engineering', author: 'Adedeji B. Badiru', bin_id: 19, status: 'available', reserved_by: null, genre: 'Business', created_at: '2024-01-15T10:00:00Z' },
+  { id: 58, book_id: 'NFC-058', title: 'Technical Communication', author: 'John M. Lannon', bin_id: 20, status: 'available', reserved_by: null, genre: 'Communication', created_at: '2024-01-15T10:00:00Z' },
+  { id: 59, book_id: 'NFC-059', title: 'Ethics in Engineering', author: 'Mike W. Martin', bin_id: 20, status: 'available', reserved_by: null, genre: 'Ethics', created_at: '2024-01-15T10:00:00Z' },
+  { id: 60, book_id: 'NFC-060', title: 'Engineering Ethics', author: 'Charles E. Harris', bin_id: 20, status: 'available', reserved_by: null, genre: 'Ethics', created_at: '2024-01-15T10:00:00Z' },
+
+  // More Computer Science
+  { id: 61, book_id: 'NFC-061', title: 'Operating System Concepts', author: 'Abraham Silberschatz', bin_id: 21, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 62, book_id: 'NFC-062', title: 'Computer Networks', author: 'Andrew S. Tanenbaum', bin_id: 21, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 63, book_id: 'NFC-063', title: 'Database System Concepts', author: 'Abraham Silberschatz', bin_id: 21, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 64, book_id: 'NFC-064', title: 'Computer Organization and Design', author: 'David A. Patterson', bin_id: 22, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 65, book_id: 'NFC-065', title: 'Structure and Interpretation of Computer Programs', author: 'Harold Abelson', bin_id: 22, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 66, book_id: 'NFC-066', title: 'You Don\'t Know JS', author: 'Kyle Simpson', bin_id: 22, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 67, book_id: 'NFC-067', title: 'Learning React', author: 'Alex Banks', bin_id: 23, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 68, book_id: 'NFC-068', title: 'Full Stack React', author: 'Anthony Accomazzo', bin_id: 23, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 69, book_id: 'NFC-069', title: 'Node.js Design Patterns', author: 'Mario Casciaro', bin_id: 23, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 70, book_id: 'NFC-070', title: 'Microservices Patterns', author: 'Chris Richardson', bin_id: 24, status: 'available', reserved_by: null, genre: 'Computer Science', created_at: '2024-01-15T10:00:00Z' },
+
+  // More AI & Data Science
+  { id: 71, book_id: 'NFC-071', title: 'Artificial Intelligence: A Modern Approach', author: 'Stuart Russell', bin_id: 24, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 72, book_id: 'NFC-072', title: 'The Elements of Statistical Learning', author: 'Trevor Hastie', bin_id: 24, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 73, book_id: 'NFC-073', title: 'Grokking Deep Learning', author: 'Andrew W. Trask', bin_id: 25, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 74, book_id: 'NFC-074', title: 'Machine Learning Yearning', author: 'Andrew Ng', bin_id: 25, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 75, book_id: 'NFC-075', title: 'Computer Vision: Algorithms and Applications', author: 'Richard Szeliski', bin_id: 25, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 76, book_id: 'NFC-076', title: 'Data Mining: Concepts and Techniques', author: 'Jiawei Han', bin_id: 26, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 77, book_id: 'NFC-077', title: 'TensorFlow in Action', author: 'Thushan Ganegedara', bin_id: 26, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 78, book_id: 'NFC-078', title: 'Practical Statistics for Data Scientists', author: 'Peter Bruce', bin_id: 26, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 79, book_id: 'NFC-079', title: 'Building Machine Learning Pipelines', author: 'Hannes Hapke', bin_id: 27, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+  { id: 80, book_id: 'NFC-080', title: 'Interpretable Machine Learning', author: 'Christoph Molnar', bin_id: 27, status: 'available', reserved_by: null, genre: 'AI & Data Science', created_at: '2024-01-15T10:00:00Z' },
+
+  // More IoT
+  { id: 81, book_id: 'NFC-081', title: 'Building the Internet of Things', author: 'Maciej Kranz', bin_id: 27, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 82, book_id: 'NFC-082', title: 'IoT Security: Advances in Authentication', author: 'Madhusanka Liyanage', bin_id: 28, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 83, book_id: 'NFC-083', title: 'Edge Computing for IoT', author: 'Fidan Mehmeti', bin_id: 28, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 84, book_id: 'NFC-084', title: 'IoT Analytics', author: 'Hui Liu', bin_id: 28, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 85, book_id: 'NFC-085', title: 'Industrial IoT', author: 'Gilbert M. Amazona', bin_id: 29, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 86, book_id: 'NFC-086', title: 'IoT and Smart Cities', author: 'Sergio F. Ochoa', bin_id: 29, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 87, book_id: 'NFC-087', title: 'Wireless Sensor Networks', author: 'Ian F. Akyildiz', bin_id: 29, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 88, book_id: 'NFC-088', title: 'LoRaWAN and LPWAN', author: 'Olivier Hersent', bin_id: 30, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 89, book_id: 'NFC-089', title: 'IoT Protocols and Standards', author: 'Marco Zennaro', bin_id: 30, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+  { id: 90, book_id: 'NFC-090', title: 'Beginning IoT Projects', author: 'Charles Bell', bin_id: 30, status: 'available', reserved_by: null, genre: 'IoT', created_at: '2024-01-15T10:00:00Z' },
+
+  // More IT & Networking
+  { id: 91, book_id: 'NFC-091', title: 'CCNA Routing and Switching', author: 'Todd Lammle', bin_id: 31, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 92, book_id: 'NFC-092', title: 'Network+ Guide to Networks', author: 'Jill West', bin_id: 31, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 93, book_id: 'NFC-093', title: 'Security+ Guide to Network Security', author: 'Mark Ciampa', bin_id: 31, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 94, book_id: 'NFC-094', title: 'CompTIA A+ Certification', author: 'Mike Meyers', bin_id: 32, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 95, book_id: 'NFC-095', title: 'The Art of Computer Virus Research', author: 'Peter Szor', bin_id: 32, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 96, book_id: 'NFC-096', title: 'Site Reliability Engineering', author: 'Betsy Beyer', bin_id: 32, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 97, book_id: 'NFC-097', title: 'Continuous Delivery', author: 'Jez Humble', bin_id: 33, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 98, book_id: 'NFC-098', title: 'Infrastructure as Code', author: 'Kief Morris', bin_id: 33, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 99, book_id: 'NFC-099', title: 'Monitoring and Observability', author: 'George Miranda', bin_id: 33, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' },
+  { id: 100, book_id: 'NFC-100', title: 'The Unicorn Project', author: 'Gene Kim', bin_id: 34, status: 'available', reserved_by: null, genre: 'Information Technology', created_at: '2024-01-15T10:00:00Z' }
+];
